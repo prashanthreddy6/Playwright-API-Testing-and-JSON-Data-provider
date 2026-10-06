@@ -1,6 +1,11 @@
-import {test,expect} from '@playwright/test';
+import {test,expect, devices} from '@playwright/test';
 import StateSpecifiJsonData from '../PageObjects/StateSpecifiJsonData.json'with {type:'json'};
 import { AutomationLabs } from '../PageObjects/AutomationLabs.js';
+
+// test.use({...devices['iPhone 13 Pro Max'],
+//     isMobile:true,
+//     hasTouch:true
+// })
 
 
 test.describe('Data Driven testing using JSON State specfic data',async ()=>{
