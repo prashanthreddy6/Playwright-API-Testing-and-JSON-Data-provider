@@ -13,7 +13,7 @@ jobs:
 
     strategy:
      fail-fast: false
-    matrix:
+     matrix:
       shard: [1,2,3,4]
 
     steps:
@@ -26,7 +26,7 @@ jobs:
     - name: Install Playwright Browsers
       run: npx playwright install --with-deps
     - name: Run Playwright tests
-      run: npx playwright test
+      run: npx playwright test --shard=${{matrix.shard}}/4
     - uses: actions/upload-artifact@v4
       if: ${{ !cancelled() }}
       with:
