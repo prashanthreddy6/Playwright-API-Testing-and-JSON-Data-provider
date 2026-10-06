@@ -4,7 +4,7 @@ on:
     branches: [ main, master ]
   pull_request:
     branches: [ main, master ]
-  wokflow_dispatch:
+  workflow_dispatch:
 
 jobs:
   test:
